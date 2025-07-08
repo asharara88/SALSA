@@ -60,7 +60,7 @@ export const elevenlabsApi = {
       // Process text for better speech synthesis
       const processedText = prepareTextForSpeech(text);
       
-      const apiKey = import.meta.env.VITE_ELEVEN_LABS_API_KEY;
+      const apiKey = process.env.VITE_ELEVEN_LABS_API_KEY;
       
       if (!apiKey) {
         throw new Error('ElevenLabs API key is not configured');
@@ -243,7 +243,7 @@ export const elevenlabsApi = {
    * Get user information including character limits
    */
   async getUserInfo(): Promise<any> {
-    const apiKey = import.meta.env.VITE_ELEVEN_LABS_API_KEY;
+    const apiKey = process.env.VITE_ELEVEN_LABS_API_KEY;
     
     if (!apiKey) {
       throw new Error('ElevenLabs API key is not configured');
@@ -265,7 +265,7 @@ export const elevenlabsApi = {
    */
   async getVoices(): Promise<any[]> {
     try {
-      const apiKey = import.meta.env.VITE_ELEVEN_LABS_API_KEY;
+      const apiKey = process.env.VITE_ELEVEN_LABS_API_KEY;
       
       if (!apiKey) {
         return AVAILABLE_VOICES;
@@ -299,7 +299,7 @@ export const elevenlabsApi = {
    */
   async getVoiceSettings(voiceId: string): Promise<any> {
     try {
-      const apiKey = import.meta.env.VITE_ELEVEN_LABS_API_KEY;
+      const apiKey = process.env.VITE_ELEVEN_LABS_API_KEY;
       if (!apiKey) return VOICE_SETTINGS.STANDARD;
 
       const response = await fetch(`https://api.elevenlabs.io/v1/voices/${voiceId}/settings`, {
@@ -317,7 +317,7 @@ export const elevenlabsApi = {
    * Check if the API key is configured
    */
   isConfigured(): boolean {
-    return !!import.meta.env.VITE_ELEVEN_LABS_API_KEY;
+    return !!process.env.VITE_ELEVEN_LABS_API_KEY;
   },
   
   /**
@@ -325,5 +325,4 @@ export const elevenlabsApi = {
    */
   clearCache(): void {
     audioCache.clear();
-  }
-};
+  }};

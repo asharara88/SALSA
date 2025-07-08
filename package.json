@@ -9,7 +9,8 @@
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "lint": "eslint src/**/*.ts",
-    "test": "jest"
+    "test": "jest",
+    "sync:supplements": "ts-node src/scripts/updateSupplementStock.ts"
   },
   "keywords": [
     "text-to-speech",
@@ -36,4 +37,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }}
+  }
+}
