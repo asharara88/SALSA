@@ -64,6 +64,5 @@ Created meaningful project files to demonstrate the workflow:
 
 ## Next Steps
 
-The repository is now ready for the merge to main via GitHub Pull Request interface. Once merged, the local repository can be synchronized by pulling the latest changes from main.
-
-**Status**: ✅ Commit → ✅ Pull → ✅ Push → 🔄 Ready for Merge → ⏳ Sync (pending merge)
+The pull request has been merged to `main` and the local repository synchronized by pulling the latest changes from `origin`.
+**Status**: ✅ Commit → ✅ Pull → ✅ Push → ✅ Merge → ✅ Sync
