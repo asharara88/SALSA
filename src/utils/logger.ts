@@ -26,14 +26,12 @@ const formatMessage = (level: string, message: string, data?: any): string => {
   let dataStr = '';
   if (data) {
     // Custom JSON replacer to handle Error objects properly
-    const errorReplacer = (key: string, value: any) => {
+    const errorReplacer = (_key: string, value: any) => {
       if (value instanceof Error) {
-        return {
-          name: value.name,
-          message: value.message,
-          stack: value.stack,
-          ...value // Include any additional enumerable properties
+        const { name, message, stack, ...rest } = value as Error & {
+          [key: string]: unknown;
         };
+        return { name, message, stack, ...rest };
       }
       return value;
     };

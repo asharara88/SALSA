@@ -50,6 +50,10 @@ The female protocol emphasizes hormone balance, joint-friendly exercise routines
 
 Supplement data can be found in `src/data/supplements.csv` and is automatically converted to `src/data/supplements.json` for programmatic use. Each entry provides a supplement name, target benefits, and suggested daily dosage.
 
+### Updating Supplement Stock
+
+Run `npm run sync:supplements` to fetch the latest inventory from the Biowell API and push it to the frontend store. A scheduled GitHub Action also executes daily to keep the storefront current.
+
 ## Development
 
 This project is built with TypeScript and uses modern ES modules.
