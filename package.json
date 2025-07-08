@@ -1,0 +1,39 @@
+{
+  "name": "salsa",
+  "version": "1.0.0",
+  "description": "Speech and Language Synthesis Application using ElevenLabs API",
+  "main": "src/api/elevenlabsApi.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "text-to-speech",
+    "elevenlabs",
+    "speech-synthesis",
+    "typescript",
+    "audio"
+  ],
+  "author": "asharara88",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
