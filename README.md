@@ -46,6 +46,10 @@ The male protocol highlights strength training, cardiovascular exercise, and nut
 
 The female protocol emphasizes hormone balance, joint-friendly exercise routines, and nutrient timing for overall vitality.
 
+## Supplement Reference
+
+Supplement data can be found in `src/data/supplements.csv` and is automatically converted to `src/data/supplements.json` for programmatic use. Each entry provides a supplement name, target benefits, and suggested daily dosage.
+
 ## Development
 
 This project is built with TypeScript and uses modern ES modules.
