@@ -60,3 +60,15 @@ This project is built with TypeScript and uses modern ES modules.
 
 ## License
 This project is licensed under the MIT License.
+
+## Troubleshooting Frontend Updates
+
+If recent changes are not showing up in the Bolt frontend, ensure that the
+`sync:supplements` script has run successfully and that the `FRONTEND_API_KEY`
+environment variable is correctly configured. Run the following command:
+
+```bash
+npm run sync:supplements
+```
+
+After the script completes, redeploy the frontend to pick up the latest data.
