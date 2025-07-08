@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "Creatine Monohydrate",
+    "Target": "Muscle energy and strength",
+    "DailyDosage": "5g"
+  },
+  {
+    "Name": "Vitamin D3",
+    "Target": "Bone health and immune support",
+    "DailyDosage": "2000 IU"
+  },
+  {
+    "Name": "Magnesium Glycinate",
+    "Target": "Nerve and muscle function",
+    "DailyDosage": "400 mg"
+  },
+  {
+    "Name": "Fish Oil",
+    "Target": "Heart health and inflammation",
+    "DailyDosage": "1-2 g"
+  },
+  {
+    "Name": "Probiotics",
+    "Target": "Gut health and digestion",
+    "DailyDosage": "10 billion CFU"
+  },
+  {
+    "Name": "Ashwagandha",
+    "Target": "Stress management",
+    "DailyDosage": "300-500 mg"
+  },
+  {
+    "Name": "Collagen",
+    "Target": "Joint and skin support",
+    "DailyDosage": "10 g"
+  }
+]
