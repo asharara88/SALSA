@@ -92,3 +92,5 @@ jest_*
 # Temporary folders
 tmp/
 temp/
+
+SALSA-1/
