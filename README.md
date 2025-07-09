@@ -58,6 +58,13 @@ Run `npm run sync:supplements` to fetch the latest inventory from the Biowell AP
 
 This project is built with TypeScript and uses modern ES modules.
 
+## Netlify Deployment
+
+Deployments are configured for Netlify using `netlify.toml`. The production site
+is available at [http://biowell.ai](http://biowell.ai). The `FRONTEND_ENDPOINT`
+environment variable is set automatically during the Netlify build to ensure the
+API updates point to this domain.
+
 ## License
 This project is licensed under the MIT License.
 
