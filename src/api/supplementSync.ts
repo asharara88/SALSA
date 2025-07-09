@@ -20,7 +20,7 @@ export interface SupplementWeb {
 }
 
 const BIOWELL_ENDPOINT = process.env.BIOWELL_ENDPOINT || 'https://api.biowell.ai/v1/supplements/all';
-const FRONTEND_ENDPOINT = process.env.FRONTEND_ENDPOINT || 'https://biowell.ai/api/frontend/supplements/update';
+const FRONTEND_ENDPOINT = process.env.FRONTEND_ENDPOINT || 'http://biowell.ai/api/frontend/supplements/update';
 
 export async function fetchSupplementStock(apiKey: string): Promise<SupplementStock[]> {
   const response = await fetch(BIOWELL_ENDPOINT, {

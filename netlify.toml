@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+ sporre-codex/fix-netlify-deployment-to-use-custom-domain
+[context.production.environment]
+  FRONTEND_ENDPOINT = "http://biowell.ai/api/frontend/supplements/update"
+
+ codex/fix-netlify-deployment-to-use-custom-domain
+[context.production.environment]
+  FRONTEND_ENDPOINT = "http://biowell.ai/api/frontend/supplements/update"
+
+# Optional: Configure environment variables for Netlify
+#[context.production.environment]
+#  NODE_VERSION = "18"
+ main
+main
