@@ -1,5 +1,4 @@
 name: update-supplement-stock-online
-
 on:
   workflow_dispatch:
   schedule:
