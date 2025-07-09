@@ -67,7 +67,7 @@ PY
             -H "Authorization: Bearer $FRONTEND_API_KEY" \
             -H "Content-Type: application/json" \
             --data @supplement_web_payload.json \
-            https://biowell.ai/api/frontend/supplements/update
+            http://biowell.ai/api/frontend/supplements/update
 
       - name: Log completion
         run: echo "✅ Supplement stock updated to online frontend successfully."
