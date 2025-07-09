@@ -25,38 +25,29 @@ jobs:
         id: validate_data
         run: |
           python - <<'PY'
-import json, sys
-required_fields = ["id", "name", "category", "dosage", "unit", "availability"]
-with open('supplement_data.json') as f:
-    data = json.load(f)
-for item in data:
-    for field in required_fields:
-        if field not in item:
-            raise AssertionError(f"Missing {field} in {item}")
-with open('validated_data.json', 'w') as f:
-    json.dump(data, f)
-PY
-
-      - name: Map to online format
-        id: map_to_online_format
-        run: |
-          python - <<'PY'
-import json
-with open('validated_data.json') as f:
-    supplement_inventory = json.load(f)
-mapped_data = []
-for item in supplement_inventory:
-    mapped_data.append({
-        "id": item["id"],
-        "title": item["name"],
-        "category": item["category"],
-        "dose": f"{item['dosage']} {item['unit']}",
-        "in_stock": item["availability"] > 0,
-        "tags": ["science-backed"] + (item.get("tags") or [])
-    })
-with open('supplement_web_payload.json', 'w') as f:
-    json.dump(mapped_data, f)
-PY
+          import json
+          # Load and validate the data
+          with open('supplement_data.json') as f:
+              data = json.load(f)
+          required_fields = ["id", "name", "category", "dosage", "unit", "availability"]
+          for item in data:
+              for field in required_fields:
+                  if field not in item:
+                      raise AssertionError(f"Missing {field} in {item}")
+          # Map to online format
+          mapped_data = []
+          for item in data:
+              mapped_data.append({
+                  "id": item["id"],
+                  "title": item["name"],
+                  "category": item["category"],
+                  "dose": f"{item['dosage']} {item['unit']}",
+                  "in_stock": item["availability"] > 0,
+                  "tags": ["science-backed"] + (item.get("tags") or [])
+              })
+          with open('supplement_web_payload.json', 'w') as f:
+              json.dump(mapped_data, f)
+          PY
 
       - name: Update frontend store
         id: update_frontend_store
