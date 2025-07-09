@@ -5,10 +5,10 @@
   "main": "src/api/elevenlabsApi.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
-    "lint": "eslint src/**/*.ts",
+    "build": "vite build",
+    "start": "vite preview",
+    "dev": "vite",
+    "lint": "eslint src/**/*.ts src/**/*.tsx",
     "test": "jest",
     "sync:supplements": "ts-node src/scripts/updateSupplementStock.ts"
   },
@@ -24,24 +24,27 @@
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^20.0.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.0.0",
     "jest": "^29.0.0",
+    "netlify-cli": "^22.2.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.0",
     "typescript": "^5.0.0",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6"
+    "vite": "^7.0.3"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.0.0",
+    "firebase-admin": "^13.4.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "firebase-admin": "^13.4.0"
+    "react-dom": "^19.1.0"
   },
   "engines": {
     "node": ">=18.0.0"
