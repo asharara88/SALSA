@@ -4,4 +4,4 @@
 
 [context.production.environment]
   FRONTEND_ENDPOINT = "http://biowell.ai/api/frontend/supplements/update"
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
